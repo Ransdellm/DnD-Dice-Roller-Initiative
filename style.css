@@ -5,7 +5,12 @@ form {
   text-align: center;
   margin: 5% 15%;
 }
+
 #modifier {
   margin-top: 1%;
-  width: 5%;
+  width: 4%;
+  border: 2px solid black;
+  height: 30px;
+  text-align: center;
+  font-size: 175%;
 }

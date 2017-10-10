@@ -8,32 +8,53 @@ document.getElementById("rollD12").onclick = rollD12;
 document.getElementById("rollD20").onclick = rollD20;
 document.getElementById("rollD100").onclick = rollD100;
 }
+
+// creates random roll based on sided die given. insert into button functions below
+const rollRandomDice = i => {
+  const num = Math.floor((Math.random() * i ) + 1);
+  return num;
+}
+
 // function that rolls dice
 rollD4 = () => {
-  const randomD4 = Math.floor((Math.random() * 4 ) + 1);
-alert(randomD4);
+  const randomD4 = rollRandomDice(4);
+  const mod = parseInt(document.getElementById("modifier").value);
+  const outcome = randomD4 + mod;
+  alert(outcome);
 }
 rollD6 = () => {
-  const randomD6 = Math.floor((Math.random() * 6 ) + 1);
-alert(randomD6);
+  const randomD6 = rollRandomDice(6);
+  const mod = parseInt(document.getElementById("modifier").value);
+  const outcome = randomD6 + mod;
+alert(outcome);
 }
 rollD8 = () => {
-  const randomD8 = Math.floor((Math.random() * 8 ) + 1);
-alert(randomD8);
+  const randomD8 = rollRandomDice(8);
+  const mod = parseInt(document.getElementById("modifier").value);
+  const outcome = randomD8 + mod;
+alert(outcome);
 }
 rollD10 = () => {
-  const randomD10 = Math.floor((Math.random() * 10 ) + 1);
-alert(randomD10);
+  const randomD10 = rollRandomDice(10);
+  const mod = parseInt(document.getElementById("modifier").value);
+  const outcome = randomD10 + mod;
+alert(outcome);
 }
 rollD12 = () => {
-  const randomD12 = Math.floor((Math.random() * 12 ) + 1);
-alert(randomD12);
+  const randomD12 = rollRandomDice(12);
+  const mod = parseInt(document.getElementById("modifier").value);
+  const outcome = randomD12 + mod;
+alert(outcome);
 }
 rollD20 = () => {
-  const randomD20 = Math.floor((Math.random() * 20 ) + 1);
-alert(randomD20);
+  const randomD20 = rollRandomDice(20);
+  const mod = parseInt(document.getElementById("modifier").value);
+  const outcome = randomD20 + mod;
+alert(outcome);
 }
 rollD100 = () => {
-  const randomD100 = Math.floor((Math.random() * 100 ) + 1);
-alert(randomD100);
+  const randomD100 = rollRandomDice(100);
+  const mod = parseInt(document.getElementById("modifier").value);
+  const outcome = randomD100 + mod;
+alert(outcome);
 }
