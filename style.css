@@ -14,3 +14,8 @@ form {
   text-align: center;
   font-size: 175%;
 }
+
+label {
+  font-size: 150%;
+  font-weight: bold;
+}
