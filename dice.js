@@ -1,5 +1,5 @@
 // calls dice roll function when button is clicked
-window.onload = function () {
+window.onload = () => {
 document.getElementById("rollD4").onclick = rollD4;
 document.getElementById("rollD6").onclick = rollD6;
 document.getElementById("rollD8").onclick = rollD8;
