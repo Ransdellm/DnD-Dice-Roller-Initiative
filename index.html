@@ -3,21 +3,26 @@
   <head>
     <meta charset="utf-8">
     <title>5e Dice Roller</title>
-    <script type="text/javascript" src="dice.js">
-    </script>
-
-    </script>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <h1>DnD Dice Roller</h1>
 
-    <button type="button" name="rollD4" id="d4">Roll d4</button>
-    <button type="button" name="rollD6" id="d6">Roll d6</button>
-    <button type="button" name="rollD8" id="d8">Roll d8</button>
-    <button type="button" name="rollD10" id="d10">Roll d10</button>
-    <button type="button" name="rollD12" id="d12">Roll d12</button>
-    <button type="button" name="rollD20" id="d20">Roll d20</button>
-    <button type="button" name="rollD100" id="d100">Roll d100</button>
+
+    <form action="index.html" method="post">
+
+      <button type="button" name="rollD4" id="rollD4">Roll d4</button>
+      <button type="button" name="rollD6" id="rollD6">Roll d6</button>
+      <button type="button" name="rollD8" id="rollD8">Roll d8</button>
+      <button type="button" name="rollD10" id="rollD10">Roll d10</button>
+      <button type="button" name="rollD12" id="rollD12">Roll d12</button>
+      <button type="button" name="rollD20" id="rollD20">Roll d20</button>
+      <button type="button" name="rollD100" id="rollD100">Roll d100</button>
+    <br>
+    <label for="modifier">Ability Modifier</label>
+      <input id="modifier"type="number" name="modifier">
+
+    </form>
 
 
 
