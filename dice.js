@@ -10,7 +10,6 @@ document.getElementById("rollD100").onclick = rollD100;
 }
 
 
-
 // creates random roll based on die given. insert into button functions below
 const rollRandomDice = i => {
   const num = Math.floor((Math.random() * i ) + 1);
