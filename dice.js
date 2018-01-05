@@ -10,12 +10,19 @@ document.getElementById("rollD100").onclick = rollD100;
 }
 
 
+
 // creates random roll based on die given. insert into button functions below
 const rollRandomDice = i => {
-  const num = Math.floor((Math.random() * i ) + 1);
-  const mod = parseInt(document.getElementById("modifier").value);
-  outcome = num + mod;
-  alert(outcome);
+  let num = Math.floor((Math.random() * i ) + 1);
+  let NumDice = document.getElementById("numOfDice")
+  let mod = parseInt(document.getElementById("modifier").value);
+  if (mod == "" || isNaN(mod)) {
+    document.getElementById("diceOut").innerHTML= (num+0);
+    return false;
+  } else {
+  let outcome = (num + mod);
+  document.getElementById("diceOut").innerHTML = outcome;
+}
 }
 
 // function that rolls dice

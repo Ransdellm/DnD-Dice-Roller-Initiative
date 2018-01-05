@@ -5,10 +5,23 @@
   <meta charset="utf-8">
   <title>DnD Tracker</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 </head>
+<style media="screen">
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+text-align: center;
+}
+::-moz-placeholder { /* Firefox 19+ */
+text-align: center;
+}
+:-ms-input-placeholder { /* IE 10+ */
+text-align: center;
+}
+:-moz-placeholder { /* Firefox 18- */
+text-align: center;
+}
+</style>
 
-<body>
+<body class="container-fluid">
   <!-- navbar start -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">DnD</a>
@@ -29,55 +42,82 @@
 <!-- jumbotron start -->
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
-    <h1 class="display-3">DnD Dice + Initiative</h1>
-    <p class="lead">for use with 5th Edition.</p>
+      <h1 class="display-3 text-center">Initiative + Encounter Assistant</h1>
+    <p class="lead text-center">for use with 5th Edition.</p>
   </div>
 </div>
 <!-- jumbotron end -->
-
-<!-- Card Container Start -->
-<div class="container">
+<!-- Card Deck Start -->
+<div class="container-fluid">
   <div class="row">
-  <div class="card col-l" style="width: 20rem;">
-  <div class="card-body">
-    <h4 class="card-title">Card title</h4>
-    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
+    <div class="col-xl col-lg-3 col-md-4 col-sm-6">
+  <div class="card">
+    <div class="card-block text-center my-auto">
+      <h4 class="card-title">No. of Dice</h4>
+      <form>
+        <div class="form-group">
+          <input type="number" name="NumDice" placeholder="No." id="numOfDice">
+        </div>
+      </form>
+    </div>
+  </div>
+  </div>
+<div class="col-xl col-lg-3 col-md-4 col-sm-6">
+  <div class="card">
+    <div class="card-block text-center my-auto">
+      <h4 class="card-title">Modifier</h4>
+      <form>
+        <div class="form-group">
+          <input type="number" name="NumDice" placeholder="MOD" id="modifier">
+        </div>
+      </form>
+    </div>
+  </div>
+  </div>
+<div class="col-xl col-lg-3 col-md-4 col-sm-6">
+  <div class="card">
+    <div class="card-block text-center my-auto">
+      <h4 class="card-title">Dice</h4>
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <div class="btn-group-vertical">
+          <button type="button" class="btn btn-secondary" id="rollD4">d4</button>
+          <button type="button" class="btn btn-secondary" id="rollD10">d10</button>
+        </div>
+        <div class="btn-group-vertical">
+          <button type="button" class="btn btn-secondary" id="rollD6">d6</button>
+          <button type="button" class="btn btn-secondary" id="rollD12">d12</button>
+          <button type="button" class="btn btn-secondary" id="rollD100">d100</button>
+        </div>
+        <div class="btn-group-vertical">
+          <button type="button" class="btn btn-secondary" id="rollD8">d8</button>
+          <button type="button" class="btn btn-secondary"
+          id="rollD20">d20</button>
+        </div>
+      </div>
+    </div>
+  </div>
   </div>
 </div>
+<div class="my-auto text-center ">
+  <div class="card card-block text-center my-auto" id="diceOut">
 
-<div class="card col-l" style="width: 20rem;">
-<div class="card-body">
-  <h4 class="card-title">Card title</h4>
-  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  <a href="#" class="card-link">Card link</a>
-  <a href="#" class="card-link">Another link</a>
+  </div>
+
 </div>
 </div>
-
-<div class="card col-l" style="width: 20rem;">
-<div class="card-body">
-  <h4 class="card-title">Card title</h4>
-  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  <a href="#" class="card-link">Card link</a>
-  <a href="#" class="card-link">Another link</a>
-</div>
-</div>
-</div>
-</div>
-<!-- Card Container End -->
+<!-- Card Deck Stop -->
 
 
 
 
 
 
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="dice.js">
+
+  </script>
 </body>
 
 </html>
